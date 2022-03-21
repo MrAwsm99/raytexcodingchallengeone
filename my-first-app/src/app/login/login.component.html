@@ -1,0 +1,23 @@
+<p>login works!</p>
+<div class="container">
+    <div *ngIf="!dS.loggedIn" class="body d-md-flex align-items-center justify-content-between">
+        <div class=" box-2 d-flex flex-column h-100">
+            <div class="mt-5">
+                <p class="mb-1 h-1">Login.</p>
+                <p  style="color: gray; font-size:larger; font-weight: 600;">Welcome</p>
+                <div class="d-flex flex-column mt-5">
+                    <form>
+                        <div class="form-group  mt-2">
+                          <label for="exampleInputEmail1 mt-1">Email address</label>
+                          <input type="email" [(ngModel)]="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group  mt-2">
+                          <label for="exampleInputPassword1 mt-1">Password</label>
+                          <input type="password" [(ngModel)]="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="button" class="btn btn-primary mt-2" (click)="login()">Log in</button>
+                      </form>
+    </div>
+
+</div>
+<h1 *ngIf="dS.loggedIn">Welcome!!</h1>

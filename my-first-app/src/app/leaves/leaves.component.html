@@ -1,0 +1,57 @@
+<p>leaves works!</p>
+<form>
+    <div class="container">
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label>First Name</label>
+                <input type="text" class="form-control" formControlName="FirstName">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Last Name</label>
+                <input type="text" class="form-control" formControlName="LastName">
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Gender</label><br>
+            <input type="text" formControlName="gender">
+        </div>
+       <br>
+            <label>PL leaves</label>
+            <div class="form-row row">
+            <div class="form-group col-md-3">
+            <label>From</label>
+            <input type="date" [min]="minDate" class="form-control" formControlName="plleavesfrom">
+            </div>
+            <div class="form-group col-md-3">  
+            <label>To</label>
+            <input type="date" [max]="maxDate" class="form-control" formControlName="plleavesto"><br>
+            </div>
+            </div>
+            <label>CL leaves</label>
+            <div class="form-row row">
+            <div class="form-group col-md-3">
+            <label>From</label>
+            <input type="date" [min]="minDate" class="form-control" formControlName="clleavesfrom">
+            </div>
+            <div class="form-group col-md-3">  
+            <label>To</label>
+            <input type="date" [max]="maxDate" class="form-control" formControlName="clleavesto"><br>
+            </div>
+            </div>
+       
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" formControlName="PhoneNumber">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+        <br>
+</form>
